@@ -1,0 +1,87 @@
+site_name: NLP Chadian
+site_url: https://mydomain.org/mysite
+site_description: NLP est un projet personnel que je mène pour vous embarger dans l'apprentissage de machine learning A short description of my site
+theme:
+  name: material
+  icon:
+    logo: fontawesome/brands/buysellads #:simple-htop: :simple-htmx: 
+#  logo: assets/logoNLPChadianlanguages.png
+  ######### AJout de footer
+  features:
+    - navigation.footer
+    - navigation.tabs
+  #  - navigation.indexes
+  #  - navigation.prev_next
+    - navigation.top
+  #  - navigation.bottom
+    - navigation.page_number
+  #  - navigation.edit_url
+    - navigation.scroll_top
+
+
+  palette: # Options de couleurs: 'default', 'slate', 'indigo', 'red', 'green', 'teal'
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: teal
+      accent: deep orange
+#features:
+# - navigation.indexes
+#- navigation.tabs
+
+#plugins:
+# - search
+#- blog
+
+#nav:
+ # - Accueil: index.md
+ # - Blog: blog.md
+ # - Machine Learning: machineLearning.md
+ # - Outils: tools.md
+ # - À propos: about.md
+
+
+###### Ajout et utilisation de plus de 1000 émojis et icônes
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Ajout d'ajustement des blogs de code dans les articles
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # Ajout des ongles la table des matières
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+    #Les avertissements (ou rappels)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+# Ajout des réseaux sociaux
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/abdelazizharane 
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/abdel-aziz-harane
+
+# Ajout de copyright
+copyright: Copyright &copy; 2025 Abdel-aziz Harane
