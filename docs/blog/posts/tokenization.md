@@ -15,88 +15,73 @@ Chacun présente des avantages et des inconvénients, nous permettant d'explorer
 
 Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
 
+## Tokenization
+
+Dans le cadre de ce projet, nous avons appliqué **trois principaux algorithmes** de tokenization.
+Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne.
+
+Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
+
 ??? info "Qu'est-ce qu'un tokenizer ?"
 
-    Imagine que tu veux apprendre à un ordinateur à lire et comprendre une phrase. Mais pour lui, une phrase est juste une suite de lettres collées les unes aux autres. Il a donc besoin d'un outil pour découper la phrase en petits morceaux compréhensibles. Ce découpage s'appelle la **tokenization**.
+Pour apprendre à un ordinateur à lire et comprendre une phrase, nous devons à priori numériser ces mots (vectorisation) pour qu'il puisse comprendre. Pour la machine, il est impossible de comprendre les mots brutes sans les faire passer par une moulette. C'est-à-dire une machine ne comprend que 1 et 0 et pour elle, une phrase est juste une suite de lettres collées les unes aux autres. Elle a donc besoin d'un outil pour découper la phrase en petits morceaux compréhensibles et numériques. Ce découpage s'appelle la **tokenization** et **l'encodage** lorsque cette phrase est vectorisée comme `[129, 103, 192]`.
 
-    Par exemple, la phrase :
+Par exemple, la phrase :
+**"Zahra indaha khalag asfar"**
+Peut être transformée en :
 
-    **"الولد يلعب بالكرة"** (Le garçon joue avec le ballon)
+- `"Zahra"`
+- `"indaha"`
+- `"khalag"`
+- `"asfar"`
 
-    Peut être transformée en :
-
-    - **"الولد"** (le garçon)
-    - **"يلعب"** (joue)
-    - **"بالكرة"** (avec le ballon)
-
-    Ces morceaux sont appelés des **tokens**, et l'ordinateur peut maintenant travailler avec eux plus facilement.
+Ces morceaux sont appelés des **tokens**, et l'ordinateur peut maintenant travailler avec eux plus facilement.
 
 !!! note "Les langues tchadiennes et la tokenization"
 
-    Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des défis uniques en tokenization. L'arabe tchadien, par exemple, utilise une écriture attachée et des mots qui peuvent être très longs lorsqu'ils contiennent des préfixes et suffixes. Il est donc essentiel d'utiliser des algorithmes adaptés à ces spécificités.
+Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des défis uniques en tokenization. L'arabe tchadien, par exemple, utilise une écriture attachée et des mots qui peuvent être très longs lorsqu'ils contiennent des préfixes et suffixes. Il est donc essentiel de tester plusieurs algorithmes et si besoin d'en créer un autre (ce que nous allons faire).
 
 ### Les 3 algorithmes les plus utilisés
 
 === "BPE (Byte Pair Encoding)"
 
-    ??? info "C'est quoi BPE ?"
+??? info "C'est quoi BPE ?"
 
-        Imagine que tu veux apprendre à écrire un texte en utilisant le moins de place possible. Plutôt que de stocker chaque mot individuellement, tu peux repérer les lettres ou les groupes de lettres les plus fréquents et les remplacer par un symbole plus court.
+    Lors qu'on veut apprendre à écrire un texte en utilisant le moins de place possible ou plutôt que de stocker chaque mot individuellement, nous pouvons donc repérer les lettres ou les groupes de lettres les plus fréquents et les remplacer par un symbole plus court.
 
-        Par exemple, dans **"الولد يلعب بالكرة"**, si on remarque que **"ال"** revient souvent, on peut le remplacer par un seul symbole. Ainsi, l'ordinateur aura moins de morceaux à gérer.
+**Exemple en arabe tchadien :**
 
-    **Exemple en arabe tchadien :**
-    - Phrase originale : **"الولد يلعب بالكرة"**
-    - Découpage en tokens : **["ال", "ولد", "يلعب", "بال", "كرة"]**
-    - Après BPE : **["#A", "ولد", "#B", "كرة"]** (où #A et #B sont des unités apprises)
+- Phrase originale : **"Zahra indaha khalag asfar"**
+- Découpage en tokens : **["Za", "hra", "inda", "ha", "kha", "lag", "as", "far"]**
+- Après BPE : **["#A", "inda", "ha", "#B"]** (où #A et #B sont des unités apprises)
 
-=== "SentencePiece"
+=== "Sentencepiece"
 
-    ??? info "C'est quoi SentencePiece ?"
+??? info "C'est quoi SentencePiece ?"
 
-        Imagine que tu as une phrase et que tu veux la découper, mais tu ne veux pas seulement couper aux espaces (car certaines langues n'ont pas d'espaces clairs entre les mots). SentencePiece apprend à découper la phrase en morceaux de manière plus flexible.
+    Imagineons que nous avons une phrase et voulons la découper, mais nous ne voulons pas seulement couper aux espaces (car certaines langues n'ont pas d'espaces clairs entre les mots comme le Chinois). Sentencepiece apprend à découper la phrase en morceaux de manière plus flexible.
 
-    **Exemple en arabe tchadien :**
-    - Phrase originale : **"أنا أدرس في الجامعة"** (Je fais mes études à l’université)
-    - Tokenization avec SentencePiece : **["أنا", "أدرس", "في", "الجامعة"]**
-    - SentencePiece peut aussi découper : **["أنا", "أ", "درس", "في", "ال", "جامعة"]** pour plus de flexibilité.
+**Exemple en arabe tchadien :**
 
-=== "Unigram"
+- Phrase originale : **"Al-naadum da gaa'id fil-beet"**
+- Tokenization avec SentencePiece : **["Al-", "naadum", "da", "gaa'id", "fil-", "beet"]**
+- SentencePiece peut aussi découper : **["Al", "na", "adum", "da", "gaa'", "id", "fil", "beet"]** pour plus de flexibilité.
 
-    ??? info "C'est quoi Unigram ?"
+=== "WordPiece"
 
-        Imagine que tu veux découper une phrase en morceaux, mais au lieu de toujours prendre les mêmes morceaux, tu regardes quelles parties sont les plus utiles statistiquement. Tu essayes plusieurs options et tu choisis celle qui minimise le nombre total de morceaux tout en gardant du sens.
+??? info "C'est quoi WordPiece ?"
 
-    **Exemple en arabe tchadien :**
-    - Phrase originale : **"الأطفال يلعبون في الحديقة"** (Les enfants jouent dans le jardin)
-    - Tokenization avec Unigram : **["الأطفال", "يلعبون", "في", "الحديقة"]**
-    - Mais il pourrait aussi décider de : **["الأ", "طفال", "يلعبون", "في", "الحديقة"]** si cela est plus efficace.
+    WordPiece est un algorithme qui coupe une phrase en sous-unités, en favorisant les segments les plus fréquemment rencontrés dans les données d'entraînement. Cette approche est utilisée dans des modèles comme BERT.
 
----
+**Exemple en shu :**
+
+- Phrase originale : **"Zahra indaha khalag asfar"**
+- Tokenization avec WordPiece : **["Zah", "##ra", "inda", "##ha", "khal", "##ag", "as", "##far"]**
+- Cela permet de garder des unités fréquentes tout en fragmentant les mots moins courants.
 
 Ces trois méthodes nous ont permit de mieux adapter la tokenization en créant notre propre tokenizer sur le vocabulaire de l'arabe tchadienne.
-\_Cette approche pourrais être étendue à d'autres langues locales telles que : Sara, Kanembou, Moundang, Zaghawa, ... C'est une première expérimentation et nous l'adapterons à nos autres langues locales.
+Cette approche pourrais être étendue à d'autres langues locales telles que : Sara, Kanembou, Moundang, Zaghawa, ... C'est une première expérimentation et nous l'adapterons à nos autres langues locales.
 
-Ci-dessous les scripts pour chaque algo en R et python
+```
 
-### Code Blocks in Content Tabs
-
-=== "Python"
-
-    ```py
-    def main():
-        print("Hello world!")
-
-    if __name__ == "__main__":
-        main()
-    ```
-
-=== "R"
-
-    ```js
-    function main() {
-        console.log("Hello world!");
-    }
-
-    main();
-    ```
+```
