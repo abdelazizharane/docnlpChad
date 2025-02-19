@@ -1,11 +1,15 @@
 site_name: NLP Chadian
-site_url: https://abdelazizharane.github.io/docnlpChad/
-site_description: NLP est un projet personnel que je mène pour vous embarger dans le NLP des langues locales
+site_url: https://mydomain.org/mysite
+site_description: NLP Chadian est un projet portant sur les langues locales du Tchad. Il a pour objectif de promouvoir les langues locales du Tchad en les rendant accessibles à tous.
+repo_url: https://github.com/abdelazizharane/Corpus-Chadian-Languages
 theme:
   name: material
   icon:
     logo: fontawesome/brands/buysellads #:simple-htop: :simple-htmx: 
 #  logo: assets/logoNLPChadianlanguages.png
+    favicon: fontawesome/brands/buysellads # Ajout de favicon
+    touchicon: fontawesome/brands/buysellads # Ajout de touchicon
+    repo: fontawesome/brands/github # Ajout de repo
   ######### AJout de footer
   features:
     - navigation.footer
@@ -42,7 +46,8 @@ theme:
 plugins:
   - search
   - blog
-
+  - git-revision-date-localized:
+      enable_creation_date: true
 #nav:
  # - Accueil: index.md
  # - Blog: blog.md
