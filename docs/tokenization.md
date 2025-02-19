@@ -1,38 +1,73 @@
 ## Tokenization
 
-Dans le cadre de ce projet, nous avons appliqué `trois (3) principaux algorithmes` de tokenization.
-Chacun avec ses avantages et inconvénients, ils nous ont permits d'explorer et de bien connaître ce qui se cache sous le capot de chaun de ces 3 qu'on exploré.
+## Tokenization
 
-Nous vous proposons ci-dessous leur implémentation complète en utilisant la libraire `Spacy` et `Hugging 🤗`.
-Avant de se plonger dans le détail, commençons par comprendre ce quoi la `tokenization`, comment fonctionne-t-il ? A quoi sert ?
+Dans le cadre de ce projet, nous avons appliqué **trois principaux algorithmes** de tokenization.
+Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne.
 
-??? info "Qu'est-ce que la tokenization ?"
+Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
 
-    La tokenization est une méthode nécessaire permettant de segmenter une phrase en mots et les convertir en nombre à travers lequels la machine va apprendre.
+??? info "Qu'est-ce qu'un tokenizer ?"
 
-!!! note "Les langes tchadiennes"
+    Imagine que tu veux apprendre à un ordinateur à lire et comprendre une phrase. Mais pour lui, une phrase est juste une suite de lettres collées les unes aux autres. Il a donc besoin d'un outil pour découper la phrase en petits morceaux compréhensibles. Ce découpage s'appelle la **tokenization**.
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+    Par exemple, la phrase :
 
-### Les 3 algo les plus utilisés
+    **"الولد يلعب بالكرة"** (Le garçon joue avec le ballon)
+
+    Peut être transformée en :
+
+    - **"الولد"** (le garçon)
+    - **"يلعب"** (joue)
+    - **"بالكرة"** (avec le ballon)
+
+    Ces morceaux sont appelés des **tokens**, et l'ordinateur peut maintenant travailler avec eux plus facilement.
+
+!!! note "Les langues tchadiennes et la tokenization"
+
+    Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des défis uniques en tokenization. L'arabe tchadien, par exemple, utilise une écriture attachée et des mots qui peuvent être très longs lorsqu'ils contiennent des préfixes et suffixes. Il est donc essentiel d'utiliser des algorithmes adaptés à ces spécificités.
+
+### Les 3 algorithmes les plus utilisés
 
 === "BPE (Byte Pair Encoding)"
 
-    This is some plain text
+    ??? info "C'est quoi BPE ?"
+
+        Imagine que tu veux apprendre à écrire un texte en utilisant le moins de place possible. Plutôt que de stocker chaque mot individuellement, tu peux repérer les lettres ou les groupes de lettres les plus fréquents et les remplacer par un symbole plus court.
+
+        Par exemple, dans **"الولد يلعب بالكرة"**, si on remarque que **"ال"** revient souvent, on peut le remplacer par un seul symbole. Ainsi, l'ordinateur aura moins de morceaux à gérer.
+
+    **Exemple en arabe tchadien :**
+    - Phrase originale : **"الولد يلعب بالكرة"**
+    - Découpage en tokens : **["ال", "ولد", "يلعب", "بال", "كرة"]**
+    - Après BPE : **["#A", "ولد", "#B", "كرة"]** (où #A et #B sont des unités apprises)
 
 === "SentencePiece"
 
-    * First item
-    * Second item
-    * Third item
+    ??? info "C'est quoi SentencePiece ?"
 
-=== "Uni gramm"
+        Imagine que tu as une phrase et que tu veux la découper, mais tu ne veux pas seulement couper aux espaces (car certaines langues n'ont pas d'espaces clairs entre les mots). SentencePiece apprend à découper la phrase en morceaux de manière plus flexible.
 
-    1. First item
-    2. Second item
-    3. Third item
+    **Exemple en arabe tchadien :**
+    - Phrase originale : **"أنا أدرس في الجامعة"** (Je fais mes études à l’université)
+    - Tokenization avec SentencePiece : **["أنا", "أدرس", "في", "الجامعة"]**
+    - SentencePiece peut aussi découper : **["أنا", "أ", "درس", "في", "ال", "جامعة"]** pour plus de flexibilité.
+
+=== "Unigram"
+
+    ??? info "C'est quoi Unigram ?"
+
+        Imagine que tu veux découper une phrase en morceaux, mais au lieu de toujours prendre les mêmes morceaux, tu regardes quelles parties sont les plus utiles statistiquement. Tu essayes plusieurs options et tu choisis celle qui minimise le nombre total de morceaux tout en gardant du sens.
+
+    **Exemple en arabe tchadien :**
+    - Phrase originale : **"الأطفال يلعبون في الحديقة"** (Les enfants jouent dans le jardin)
+    - Tokenization avec Unigram : **["الأطفال", "يلعبون", "في", "الحديقة"]**
+    - Mais il pourrait aussi décider de : **["الأ", "طفال", "يلعبون", "في", "الحديقة"]** si cela est plus efficace.
+
+---
+
+Ces trois méthodes nous ont permit de mieux adapter la tokenization en créant notre propre tokenizer sur le vocabulaire de l'arabe tchadienne.
+\_Cette approche pourrais être étendue à d'autres langues locales telles que : Sara, Kanembou, Moundang, Zaghawa, ... C'est une première expérimentation et nous l'adapterons à nos autres langues locales.
 
 Ci-dessous les scripts pour chaque algo en R et python
 

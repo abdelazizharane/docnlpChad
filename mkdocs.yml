@@ -25,7 +25,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: green
+      primary: blue grey
       accent: deep purple
 
     # Light Mode
@@ -39,9 +39,9 @@ theme:
 # - navigation.indexes
 #- navigation.tabs
 
-#plugins:
+plugins:
 # - search
-#- blog
+  - blog
 
 #nav:
  # - Accueil: index.md
