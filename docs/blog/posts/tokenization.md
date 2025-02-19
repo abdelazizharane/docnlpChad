@@ -1,4 +1,12 @@
-## Tokenization
+---
+Autor: Abdel-aziz Harane
+date:
+  created: 2025-02-19
+categories:
+  - Tokenization
+  - Preprocessing
+title: Tokenization
+---
 
 ## Tokenization
 
