@@ -11,14 +11,7 @@ title: Tokenization
 ## Tokenization
 
 Dans le cadre de ce projet, nous avons appliqué **trois principaux algorithmes** de tokenization.
-Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne.
-
-Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
-
-## Tokenization
-
-Dans le cadre de ce projet, nous avons appliqué **trois principaux algorithmes** de tokenization.
-Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne.
+Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne (shu).
 
 Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
 
@@ -45,7 +38,7 @@ Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des 
 
 === "BPE (Byte Pair Encoding)"
 
-??? info "C'est quoi BPE ?"
+    ??? info "C'est quoi BPE ?"
 
     Lors qu'on veut apprendre à écrire un texte en utilisant le moins de place possible ou plutôt que de stocker chaque mot individuellement, nous pouvons donc repérer les lettres ou les groupes de lettres les plus fréquents et les remplacer par un symbole plus court.
 
@@ -57,7 +50,7 @@ Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des 
 
 === "Sentencepiece"
 
-??? info "C'est quoi SentencePiece ?"
+    ??? info "C'est quoi Sentencepiece ?"
 
     Imagineons que nous avons une phrase et voulons la découper, mais nous ne voulons pas seulement couper aux espaces (car certaines langues n'ont pas d'espaces clairs entre les mots comme le Chinois). Sentencepiece apprend à découper la phrase en morceaux de manière plus flexible.
 
@@ -67,9 +60,9 @@ Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des 
 - Tokenization avec SentencePiece : **["Al-", "naadum", "da", "gaa'id", "fil-", "beet"]**
 - SentencePiece peut aussi découper : **["Al", "na", "adum", "da", "gaa'", "id", "fil", "beet"]** pour plus de flexibilité.
 
-=== "WordPiece"
+=== "Wordpiece"
 
-??? info "C'est quoi WordPiece ?"
+    ??? info "C'est quoi WordPiece ?"
 
     WordPiece est un algorithme qui coupe une phrase en sous-unités, en favorisant les segments les plus fréquemment rencontrés dans les données d'entraînement. Cette approche est utilisée dans des modèles comme BERT.
 
@@ -81,7 +74,3 @@ Les langues tchadiennes, comme l'arabe tchadien et le ngambaye, présentent des 
 
 Ces trois méthodes nous ont permit de mieux adapter la tokenization en créant notre propre tokenizer sur le vocabulaire de l'arabe tchadienne.
 Cette approche pourrais être étendue à d'autres langues locales telles que : Sara, Kanembou, Moundang, Zaghawa, ... C'est une première expérimentation et nous l'adapterons à nos autres langues locales.
-
-```
-
-```
