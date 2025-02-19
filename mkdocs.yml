@@ -46,8 +46,6 @@ theme:
 plugins:
   - search
   - blog
-  - git-revision-date-localized:
-      enable_creation_date: true
 #nav:
  # - Accueil: index.md
  # - Blog: blog.md
