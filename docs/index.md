@@ -4,11 +4,20 @@ Bienvenue - Welcome مرحبا - dans la documentation NLP des langue thcadienne
 
 Toute la documentation des données est disponible sur le repository [Corpus chadian languages](https://github.com/abdelazizharane/Corpus-Chadian-Languages/).
 
-## Projet IA pour les Langues Tchadiennes
+## Projet NLP pour les Langues Tchadiennes
 
-L’idée de ce projet est née d’un constat simple : **la plupart des langues tchadiennes sont absentes du monde numérique**. Imaginez une personne parlant uniquement l’arabe tchadien ou le ngambaye, essayant d’interagir avec un chatbot en ligne. Aujourd’hui, **cette personne n’a aucune option**. Nous voulons changer cela.
+Le Tchad est un pays avec une large diversité linguistique et culturelle et compte plus de 123 langues autochtones selon [le site Ethnologue](https://www.ethnologue.com/country/TD/).
 
-Notre projet ambitionne de **développer des modèles d’intelligence artificielle (IA) capables de comprendre et de répondre en langues tchadiennes**. En commençant par l’arabe tchadien, nous construirons progressivement des modèles pour d’autres langues locales. Mais nous ne nous arrêtons pas là : à long terme, nous souhaitons aller **bien au-delà du texte**.
+![alt text](/assets/flag_chad.png){ align=left }
+Nous avons entre autres : `Bagirmi, Buduma, Dajo, Dazaga, Ngambaye, Gidar, Gor, Gulay, Hadjaraï, Kanembou, Kera, Kotoko, Maba, Marba, Massa, Masalit, Mbaï, Misirié, Moubi, Moundang, Mousey, Sara, Teda, Toupouri, Waddaï et Zaghawa`.
+
+**Toutes ces langues tchadiennes sont absentes du monde numérique**. Imaginez que l'un de vous veut parler uniquement Zaghawa ou Toupouri, essayant d’interagir avec un chatbot en ligne. Aujourd’hui, **vous n'avez aucune option**. Nous voulons changer cela.
+
+dans le développement des technologies de traitement du langage naturel (TALN ou NLP - Natural Language Processing).
+
+Notre projet ambitionne de **développer des modèles de traitement du langage naturel (TALN ou NLP - Natural Language Processing)capables de comprendre et de répondre en langues tchadiennes**.
+
+En commençant par l’arabe tchadien, nous construirons progressivement des modèles pour d’autres langues locales. Mais nous ne nous arrêtons pas là : à long terme, nous souhaitons aller **bien au-delà du texte**.
 
 ??? info "Pourquoi ce projet est-il crucial ?"
 

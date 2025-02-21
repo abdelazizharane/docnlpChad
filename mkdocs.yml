@@ -85,6 +85,16 @@ extra:
       link: https://github.com/abdelazizharane 
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/abdel-aziz-harane
+  alternate:
+    - name: French
+      link: /fr/
+      lang: fr
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: Arabic
+      link: /ar/ 
+      lang: ar
 
 # Ajout de copyright
 copyright: Copyright &copy; 2025 Abdel-aziz Harane
