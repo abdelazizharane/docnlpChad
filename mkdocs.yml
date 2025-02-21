@@ -15,9 +15,9 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.indexes
-  #  - navigation.prev_next
+    - navigation.prev_next
     - navigation.top
-  #  - navigation.bottom
+    - navigation.bottom
     - navigation.page_number
   #  - navigation.edit_url
     - navigation.scroll_top
@@ -45,7 +45,8 @@ theme:
 
 plugins:
   - search
-  - blog
+  - blog:
+      summary: true
 #nav:
  # - Accueil: index.md
  # - Blog: blog.md
@@ -85,16 +86,16 @@ extra:
       link: https://github.com/abdelazizharane 
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/abdel-aziz-harane
-  alternate:
-    - name: French
-      link: /fr/
-      lang: fr
-    - name: English
-      link: /en/ 
-      lang: en
-    - name: Arabic
-      link: /ar/ 
-      lang: ar
+ # alternate:
+  #  - name: French
+  #    link: /fr/
+  #    lang: fr
+  #  - name: English
+  #    link: /en/ 
+  #    lang: en
+  #  - name: Arabic
+  #    link: /ar/ 
+  #    lang: ar
 
 # Ajout de copyright
 copyright: Copyright &copy; 2025 Abdel-aziz Harane

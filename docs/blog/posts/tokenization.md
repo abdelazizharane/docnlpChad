@@ -1,11 +1,13 @@
 ---
-Autor: Abdel-aziz Harane
-date:
-  created: 2025-02-19
+Author: Abdel-aziz Harane
+date: 2025-02-19
 categories:
   - Tokenization
   - Preprocessing
+cover_image: ../../assets/cover_tokenization.jpg
 ---
+
+<img src="/docs/assets/AbdelH.png" alt="Author Image" style="border-radius: 50%; width: 100px; height: 100px;">
 
 ## Tokenization
 
@@ -20,7 +22,7 @@ Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est impor
 
 Par exemple, la phrase :
 
-```r title="une phrase en shu"
+```text title="une phrase en shu"
 **"Zahra indaha khalag asfar"**
 Peut être transformée en :
 
@@ -44,7 +46,7 @@ Ces morceaux sont appelés des **tokens**, et l'ordinateur peut maintenant trava
 
     Lors qu'on veut apprendre à écrire un texte en utilisant le moins de place possible ou plutôt que de stocker chaque mot individuellement, nous pouvons donc repérer les lettres ou les groupes de lettres les plus fréquents et les remplacer par un symbole plus court.
 
-    ```r title="exemple en shu"
+    ```text title="exemple en shu"
     - Phrase originale : **"Zahra indaha khalag asfar"**
     - Découpage en tokens : **["Za", "hra", "inda", "ha", "kha", "lag", "as", "far"]**
     - Après BPE : **["#A", "inda", "ha", "#B"]** (où #A et #B sont des unités apprises)
@@ -56,7 +58,7 @@ Ces morceaux sont appelés des **tokens**, et l'ordinateur peut maintenant trava
 
     Imagineons que nous avons une phrase et voulons la découper, mais nous ne voulons pas seulement couper aux espaces (car certaines langues n'ont pas d'espaces clairs entre les mots comme le Chinois). Sentencepiece apprend à découper la phrase en morceaux de manière plus flexible.
 
-    ```r title="exemple en shu"
+    ```text title="exemple en shu"
     - Phrase originale : **"Al-naadum da gaa'id fil-beet"**
     - Tokenization avec SentencePiece : **["Al-", "naadum", "da", "gaa'id", "fil-", "beet"]**
     - SentencePiece peut aussi découper : **["Al", "na", "adum", "da", "gaa'", "id", "fil", "beet"]** pour plus de flexibilité.

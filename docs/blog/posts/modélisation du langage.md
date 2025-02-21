@@ -1,5 +1,5 @@
 ---
-Autor: Abdel-aziz Harane
+Author: Abdel-aziz Harane
 date:
   created: 2025-02-15
 #links:
