@@ -4,6 +4,7 @@ site_description: NLP Chadian est un projet portant sur les langues locales du T
 repo_url: https://github.com/abdelazizharane/Corpus-Chadian-Languages
 theme:
   name: material
+  custom_dir: overrides
   icon:
     logo: fontawesome/brands/buysellads #:simple-htop: :simple-htmx: 
 #  logo: assets/logoNLPChadianlanguages.png

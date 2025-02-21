@@ -14,7 +14,7 @@ cover_image: ../../assets/API.png
 Dans le cadre de ce projet, nous avons appliqué **trois principaux algorithmes** de tokenization.
 Chacun présente des avantages et des inconvénients, nous permettant d'explorer et de mieux comprendre le fonctionnement de la tokenization, notamment pour la langue arabe tchadienne (shu).
 
-<!-- Lire plus -->
+<!-- more -->
 
 Nous allons d'abord expliquer ce qu'est la tokenization, pourquoi elle est importante et comment elle fonctionne, avant de découvrir ensemble les trois méthodes que nous avons utilisées.
 

@@ -11,7 +11,7 @@ date:
 
 Les langues tchadiennes sont nombreuses et variées, mais elles restent largement sous-représentées dans le domaine du traitement automatique du langage (NLP). Pour combler ce vide, nous devons développer des **modèles de langage** adaptés à ces langues, capables de comprendre et de générer du texte de manière fluide et pertinente.
 
-<!-- Lire plus -->
+<!-- more -->
 
 ??? info "Pourquoi est-ce important ?"
 
