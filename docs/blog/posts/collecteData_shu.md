@@ -12,6 +12,8 @@ categories:
 
 Dans un projet NLP, la phase la plus complexe est la collecte et le traitement des données. Pour ce projet, c'est un défi majeur (qui m'a pris 4 mois), notamment en raison du manque de ressources structurées et de la diversité des formats de données. Dans cet article, nous allons aborder **les différentes étapes et défis liés à l’extraction, la transformation et la structuration des données linguistiques** obtenues à partir de sources variées (textes religieux, vocabulaires, grammaires) en utilisant **R et Python**.
 
+<!-- Lire plus -->
+
 J'espère qu'il vous s'avérera utile.
 Il y a beaucoup de choses à discuter ici du côté pratique de cette collecte mais j'essayerai d'être plus précis en vous fournissant que les nécessaires.
 

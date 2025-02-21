@@ -11,6 +11,8 @@ date:
 
 Les langues tchadiennes sont nombreuses et variées, mais elles restent largement sous-représentées dans le domaine du traitement automatique du langage (NLP). Pour combler ce vide, nous devons développer des **modèles de langage** adaptés à ces langues, capables de comprendre et de générer du texte de manière fluide et pertinente.
 
+<!-- Lire plus -->
+
 ??? info "Pourquoi est-ce important ?"
 
     Imaginez un étudiant tchadien souhaitant poser une question en Ngambaye à un moteur de recherche, ou un commerçant voulant rédiger une annonce en kanembou. Aujourd’hui, peu de technologies permettent ces interactions. La modélisation du langage ouvre la porte à un avenir où les langues tchadiennes seront pleinement intégrées dans le numérique.

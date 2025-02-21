@@ -8,7 +8,7 @@ Toute la documentation des données est disponible sur le repository [Corpus cha
 
 Le Tchad est un pays avec une large diversité linguistique et culturelle et compte plus de 123 langues autochtones selon [le site Ethnologue](https://www.ethnologue.com/country/TD/).
 
-![alt text](/docs/assets/flag_chad.png){ align=left }
+![Carte du Tchad](/docs/assets/flag_chad.png){ align=left }
 Nous avons entre autres : `Bagirmi, Buduma, Dajo, Dazaga, Ngambaye, Gidar, Gor, Gulay, Hadjaraï, Kanembou, Kera, Kotoko, Maba, Marba, Massa, Masalit, Mbaï, Misirié, Moubi, Moundang, Mousey, Sara, Teda, Toupouri, Waddaï et Zaghawa`.
 
 **Toutes ces langues tchadiennes sont absentes du monde numérique**. Imaginez que l'un de vous veut parler uniquement Zaghawa ou Toupouri, essayant d’interagir avec un chatbot en ligne. Aujourd’hui, **vous n'avez aucune option**. Nous voulons changer cela.

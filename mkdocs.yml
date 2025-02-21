@@ -19,9 +19,7 @@ theme:
     - navigation.top
     - navigation.bottom
     - navigation.page_number
-  #  - navigation.edit_url
     - navigation.scroll_top
-
 
   palette: # Options de couleurs: 'default', 'slate', 'indigo', 'red', 'green', 'teal'
     # Dark Mode
@@ -39,21 +37,12 @@ theme:
         name: Light mode
       primary: teal
       accent: deep orange
-#features:
-# - navigation.indexes
-#- navigation.tabs
 
 plugins:
   - search
   - blog:
       summary: true
-#nav:
- # - Accueil: index.md
- # - Blog: blog.md
- # - Machine Learning: machineLearning.md
- # - Outils: tools.md
- # - À propos: about.md
-
+      
 
 ###### Ajout et utilisation de plus de 1000 émojis et icônes
 markdown_extensions:
@@ -61,7 +50,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
 # Ajout d'ajustement des blogs de code dans les articles
   - pymdownx.highlight:
       anchor_linenums: true
@@ -86,16 +74,6 @@ extra:
       link: https://github.com/abdelazizharane 
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/abdel-aziz-harane
- # alternate:
-  #  - name: French
-  #    link: /fr/
-  #    lang: fr
-  #  - name: English
-  #    link: /en/ 
-  #    lang: en
-  #  - name: Arabic
-  #    link: /ar/ 
-  #    lang: ar
-
+      
 # Ajout de copyright
 copyright: Copyright &copy; 2025 Abdel-aziz Harane
