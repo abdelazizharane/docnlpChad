@@ -43,7 +43,8 @@ plugins:
   - search
   - blog:
       summary: true
-      
+      authors_profiles: true      
+      authors_file: "{blog}/.authors.yml"
 
 ###### Ajout et utilisation de plus de 1000 émojis et icônes
 markdown_extensions:
