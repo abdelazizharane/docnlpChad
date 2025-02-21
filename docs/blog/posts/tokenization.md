@@ -5,8 +5,7 @@ categories:
   - Tokenization
   - Preprocessing
 cover_image: ../../assets/API.png
-authors:
-  - abdelazizharane
+author: Abdel-aziz Harane Abounounou
 ---
 
 <img src="../../assets/AbdelH.png" alt="Author Image" style="border-radius: 50%; width: 100px; height: 100px;">

@@ -4,8 +4,7 @@ date:
 #links:
 # - index.md
 #- blog/index.md
-authors:
-  - abdelazizharane
+author: Abdel-aziz Harane Abounounou
 ---
 
 # Modélisation du langage pour les langues tchadiennes
