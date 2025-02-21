@@ -4,7 +4,8 @@ date:
 #links:
 # - index.md
 #- blog/index.md
-authors: abdelazizharane
+authors:
+  - abdelazizharane
 ---
 
 # Modélisation du langage pour les langues tchadiennes

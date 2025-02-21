@@ -3,5 +3,5 @@ authors:
     name: Abdel-aziz Harane Abounounou        # Author name
     description: AI Engineer & Founder Chad AI Network # Author description
     avatar: https://github.com/abdelazizharane/docnlpChad/blob/master/docs/assets/AbdelH.png        # Author avatar
-    slug: url           # Author profile slug
+    #slug: url           # Author profile slug
     url: http://abdelazizharane.github.io/datavibes  # Author website URL
