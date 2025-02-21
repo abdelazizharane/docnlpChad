@@ -90,23 +90,19 @@ Une fois les données extraites, elles nécessitent un prétraitement rigoureux 
 - **Correction des erreurs OCR** avec des dictionnaires de mots.
 - **Segmentation des phrases et tokenization**.
 
-Exemple de nettoyage en Python :
-
-```python
+```python title="preprocessing.py" linenums="1"
 import re
 
-def clean_text(text):
+def cle title="preprocessing.py" linenums="1"an_text(text):
     text = text.lower()
-    text = re.sub(r"[^a-zA-Z0-9\s]", "", text)  # Supprime les caractères spéciaux
+    text = re.sub(r"[^a-zA-Z0-9\s]", "", text)  # Suppression des caractères spéciaux
     return text
-
 text_cleaned = clean_text("Allâh est mis en forme étrangement !")
 print(text_cleaned)  # 'allah est mis en forme etrangement'
 ```
 
-### 4. Structuration et tokenization des données
-
-Pour rendre les données exploitables par un modèle NLP, nous devons
+Code APE vrai labelisé par le moteur de règles – nace (732 modalités)
+Prétraitements standards :
 
 - Passage en minuscules
 - Suppression de la ponctuation, des nombres et des stop words et la racinisation (stemming)
@@ -115,19 +111,17 @@ Pour rendre les données exploitables par un modèle NLP, nous devons
 
 Pour rendre les données exploitables par un modèle NLP, nous devons structurer les textes et segmenter les mots de manière efficace.
 
-#### Approche en R :
+- Passage en minusculeske
+- Suppression de la ponctuation, des nombres et des stop words et la racinisation (stemming)
 
-```r
-library(tokenizers)
-
-texte <- "Allah est grand et miséricordieux"
+```r title="nettoyage.r" linenums="1"
+Cerertains mots en ltexte <- "Allah est grand et miséricordieux"
 tokens <- tokenize_words(texte)
 print(tokens)
 ```
 
-#### Défi :
+Défi :od- Certains mots en langues tchadiennes sont **concaténés** et difficiles à segmenter sans un lexique adapté.
 
-- Certains mots en langues tchadiennes sont **concaténés** et difficiles à segmenter sans un lexique adapté.
 - Certaines langues utilisent **des déclinaisons riches**, rendant la tokenization plus complexe.
 
 **Solutions possibles :**
