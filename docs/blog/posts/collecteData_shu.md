@@ -1,11 +1,11 @@
 ---
-Author: Abdel-aziz Harane
 date:
   created: 2025-02-20
 categories:
   - Data collection
   - Python
   - R
+authors: abdelazizharane
 ---
 
 # Collecte et traitement des données pour SHU avec R et Python

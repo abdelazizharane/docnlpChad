@@ -1,10 +1,10 @@
 ---
-Author: Abdel-aziz Harane
 date:
   created: 2025-02-15
 #links:
 # - index.md
 #- blog/index.md
+authors: abdelazizharane
 ---
 
 # Modélisation du langage pour les langues tchadiennes
