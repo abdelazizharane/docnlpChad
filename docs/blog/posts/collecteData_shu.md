@@ -15,8 +15,7 @@ Dans un projet NLP, la phase la plus complexe est la collecte et le traitement d
 
 <!-- more -->
 
-J'espère qu'il vous s'avérera utile.
-Il y a beaucoup de choses à discuter ici du côté pratique de cette collecte mais j'essayerai d'être plus précis en vous fournissant que les nécessaires.
+J'espère qu'il vous sera utile. Il y a beaucoup de choses à discuter ici du côté pratique de cette collecte, mais j'essaierai d'être plus précis en vous fournissant que les informations nécessaires.
 
 #### Les points abordés dans cet article :
 
@@ -37,13 +36,13 @@ url <- "https://bible.com/arabe-tchadien"
 page <- read_html(url)
 
 textes <- page %>%
-  html_nodes("p") %>%  # Sélectionne les paragraphes contenant du texte
+  html_nodes("p") %>%
   html_text()
 
 writeLines(textes, "bible_arabe_tchadien.txt")
 ```
 
-#### Défi rencontré :
+#### Défis rencontrés :
 
 - Certains sites affichent du texte en JavaScript, ce qui rend l’extraction plus complexe.
 - Les chapitres et versets sont parfois imbriqués dans des balises non standardisées.
@@ -105,8 +104,9 @@ text_cleaned = clean_text("Allâh est mis en forme étrangement !")
 print(text_cleaned)  # 'allah est mis en forme etrangement'
 ```
 
-Code APE vrai labelisé par le moteur de règles – nace (732 modalités)
-Prétraitements standards :
+### 4. Structuration et tokenization des données
+
+Pour rendre les données exploitables par un modèle NLP, nous devons
 
 - Passage en minuscules
 - Suppression de la ponctuation, des nombres et des stop words et la racinisation (stemming)

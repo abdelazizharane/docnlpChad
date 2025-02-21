@@ -1,6 +1,6 @@
 # Acceuil 🗨️
 
-Bienvenue - Welcome مرحبا - dans la documentation NLP des langue thcadiennes
+Bienvenue - Welcome - مرحبا - dans la documentation NLP des langue thcadiennes
 
 Toute la documentation des données est disponible sur le repository [Corpus chadian languages](https://github.com/abdelazizharane/Corpus-Chadian-Languages/).
 
