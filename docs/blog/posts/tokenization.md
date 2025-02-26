@@ -4,11 +4,11 @@ date: 2025-02-19
 categories:
   - Tokenization
   - Preprocessing
-cover_image: ../../assets/API.png
-author: Abdel-aziz Harane Abounounou
+cover_image: assets/API.png
+authors: abdelaziz
 ---
 
-<img src="../../assets/AbdelH.png" alt="Author Image" style="border-radius: 50%; width: 100px; height: 100px;">
+<img src="/docs/assets/abdelharane.png" alt="Abdel-aziz Harane" style="border-radius: 50%; width: 100px; height: 100px;">
 
 ## Tokenization
 

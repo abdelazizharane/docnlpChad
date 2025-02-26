@@ -12,42 +12,42 @@ theme:
     touchicon: fontawesome/brands/buysellads # Ajout de touchicon
     repo: fontawesome/brands/github # Ajout de repo
   ######### AJout de footer
-  features:
-    - navigation.footer
-    - navigation.tabs
-    - navigation.expand
-    - mavigation.expansion
-    - navigation.sections
-    - search.highlight
-    - navigation.indexes
-    - navigation.prev_next
-    - navigation.top
-    - navigation.bottom
-    - navigation.page_number
-    - navigation.scroll_top
+features:
+  - navigation.footer
+  - navigation.tabs
+  - navigation.expand  # Correction ici
+  - navigation.sections
+  - search.highlight
+  - navigation.indexes
+  - navigation.prev_next
+  - navigation.top
+  - navigation.bottom
+  - navigation.page_number
+  - navigation.scroll_top
+
   nav:
     - Accueil: index.md
     - Blog: 
-        - Articles récents: blog/index.md
-        - Tous les articles: blog/posts/index.md
     - Documentation:
-        - Introduction: docs/index.md
-        - Projet NLP pour les Langues Tchadiennes: docs/nlp_chad.md
+        - Introduction: blog/index.md
+        - Projet NLP pour les Langues Tchadiennes: blog/docs/blog/posts/collecte data de shu.md
     - À propos: about.md
 
   palette: # Options de couleurs: 'default', 'slate', 'indigo', 'red', 'green', 'teal', 'cyan', 'light blue', 'blue', 'purple', 'deep purple', 'pink', 'blue grey', 'brown', 'grey'
-    - scheme: slate# Dark Mode
+    - scheme: slate #Dark mode
       toggle:
         icon: material/weather-sunny
         name: Dark mode
       primary: blue grey
       accent: deep purple
-    - scheme: default  # Light Mode
+    - scheme: default  #light mode
       toggle:
         icon: material/weather-night
         name: Light mode
       primary: teal
       accent: deep orange
+
+
 
 plugins:
   - search
@@ -69,7 +69,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   # Ajout des ongles la table des matières
   - pymdownx.superfences
   - pymdownx.tabbed:
@@ -77,15 +76,15 @@ markdown_extensions:
     #Les avertissements (ou rappels)
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
 
 # Ajout des réseaux sociaux
 extra:
+  generator: false  # Supprime la mention "Powered by MkDocs"
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/abdelazizharane 
+      link: https://github.com/abdelazizharane
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/abdel-aziz-harane
-      
-# Ajout de copyright
-copyright: Copyright &copy; 2025 Abdel-aziz Harane
+  footer:
+    copyright: |
+      Copyright &copy; 2025 Abdel-Aziz Harane

@@ -5,7 +5,7 @@ categories:
   - Data collection
   - Python
   - R
-author: Abdel-aziz Harane Abounounou
+authors: abdelaziz
 ---
 
 # Collecte et traitement des données pour SHU avec R et Python
