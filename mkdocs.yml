@@ -15,24 +15,34 @@ theme:
   features:
     - navigation.footer
     - navigation.tabs
+    - navigation.expand
+    - mavigation.expansion
+    - navigation.sections
+    - search.highlight
     - navigation.indexes
     - navigation.prev_next
     - navigation.top
     - navigation.bottom
     - navigation.page_number
     - navigation.scroll_top
+  nav:
+    - Accueil: index.md
+    - Blog: 
+        - Articles récents: blog/index.md
+        - Tous les articles: blog/posts/index.md
+    - Documentation:
+        - Introduction: docs/index.md
+        - Projet NLP pour les Langues Tchadiennes: docs/nlp_chad.md
+    - À propos: about.md
 
-  palette: # Options de couleurs: 'default', 'slate', 'indigo', 'red', 'green', 'teal'
-    # Dark Mode
-    - scheme: slate
+  palette: # Options de couleurs: 'default', 'slate', 'indigo', 'red', 'green', 'teal', 'cyan', 'light blue', 'blue', 'purple', 'deep purple', 'pink', 'blue grey', 'brown', 'grey'
+    - scheme: slate# Dark Mode
       toggle:
         icon: material/weather-sunny
         name: Dark mode
       primary: blue grey
       accent: deep purple
-
-    # Light Mode
-    - scheme: default
+    - scheme: default  # Light Mode
       toggle:
         icon: material/weather-night
         name: Light mode
